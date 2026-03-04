@@ -26,6 +26,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        - containerPort: 8443
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -61,3 +62,8 @@ spec:
   - port: 80
     targetPort: 8080
     protocol: TCP
+    name: http
+  - port: 443
+    targetPort: 8443
+    protocol: TCP
+    name: https
