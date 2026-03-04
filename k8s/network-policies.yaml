@@ -40,6 +40,8 @@ spec:
     ports:
     - protocol: TCP
       port: 8080
+    - protocol: TCP
+      port: 8443
   egress:
   # Allow frontend to communicate with backend
   - to:
